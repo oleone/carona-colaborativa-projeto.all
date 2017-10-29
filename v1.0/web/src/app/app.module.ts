@@ -17,6 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout/simple-layout.component';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { NavbarComponent } from './layout/components/navbar/navbar.component';
     DashboardComponent,
     FullLayoutComponent,
     SimpleLayoutComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { NavbarComponent } from './layout/components/navbar/navbar.component';
     MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule,
     MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule,
     MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule,
-    MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule
+    MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

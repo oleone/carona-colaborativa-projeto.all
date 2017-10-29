@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "application"
+    "name": "carona-colaborativa-projeto-.-all"
   },
   "apps": [
     {
@@ -54,10 +54,11 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "sass",
     "class": {
       "spec": false
     },
-    "component": {}
+    "component": {
+    }
   }
 }
