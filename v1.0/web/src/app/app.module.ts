@@ -17,8 +17,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout/simple-layout.component';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
+import { AppRoutingModule } from './app.routing';
+import { MapComponent } from './map/map.component';
+import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
-import { routing } from './app.routing';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { routing } from './app.routing';
     FullLayoutComponent,
     SimpleLayoutComponent,
     NavbarComponent,
-    HomeComponent
+    MapComponent,
+    LoginComponent,
+    NotFoundComponent,
+    HomeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,7 @@ import { routing } from './app.routing';
     MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule,
     MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule,
     MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule,
-    routing
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

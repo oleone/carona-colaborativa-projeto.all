@@ -1,18 +1,19 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
-
 const APP_ROUTES: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'home', loadChildren: './home/home.module#HomeModule' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'dashboard', loadChildren: './home/home.module#HomeModule' },
+  { path: 'map', loadChildren: './map/map.module#HomeModule' },
+  { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginModule' },
+  { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
+  { path: '**', loadChildren: 'not-found' }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
-
-/*@NgModule({
-  imports: [ NgModule.forRoot(APP_ROUTES) ],
+@NgModule({
+  imports: [ RouterModule.forRoot(APP_ROUTES) ],
   exports: [ RouterModule ]
 })
-export class AppRoutingModule {}*/
+export class AppRoutingModule {}

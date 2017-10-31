@@ -1,0 +1,24 @@
+<mat-sidenav-container class="example-container" role="header">
+  <mat-sidenav #sidenav class="cabecalho-sidenav">
+    <div id="header-sidenav">
+
+    </div>
+  </mat-sidenav>
+
+  <mat-toolbar class="mat-toolbar mat-toolbar-layout" [color]="pag.color" role="toolbar">
+    <span>
+      <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </span>
+    <span>
+      <h1 id="title-menu" class="not-select">{{ pag.title }}</h1>
+    </span>
+  </mat-toolbar>
+
+<!--mat-grid-list cols="4" rowHeight="1000px" role="header">
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list-->
+<div class="content"></div>
+
+</mat-sidenav-container>
