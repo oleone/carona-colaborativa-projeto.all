@@ -36,11 +36,9 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
-import { SimpleLayoutComponent } from './layout/simple-layout/simple-layout.component';
 import { AppRoutingModule } from './app.routing';
-import { HomeModule } from './home/home.module';
-import { NotFoundModule } from './not-found/not-found.module';
+import { FullLayoutComponent } from './layout/full-layout.component';
+import { SimpleLayoutComponent } from './layout/simple-layout.component';
 
 @NgModule({
   declarations: [
@@ -81,9 +79,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
-    AppRoutingModule,
-    HomeModule,
-    NotFoundModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
