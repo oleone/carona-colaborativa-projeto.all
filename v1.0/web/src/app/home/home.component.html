@@ -1,18 +1,53 @@
-<section hidden>
-  <mat-progress-bar #count color="warn" mode="determinate" [value]="count"></mat-progress-bar>
-</section>
-
 <header id="home-header">
-  <div class="container">
+  <div class="container-header">
     <div class="home-logo">
-      <img src="assets/logo-full.png" alt=".all Logo">
+      <img src="assets/logo-full.png" alt="Carona .all">
     </div>
     <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
     <!--a mat-button routerLink="/solicitar-carona">Solicitar Carona</a-->
-    <a mat-button routerLink="/cadastro">Cadastrar</a>
+    <a mat-button routerLink="/login">Login</a>
+    <a mat-button routerLink="/signup">Signup</a>
   </div>
 </header>
 
-<div class="section-home">
-  <img src="assets/mapa.png" alt="">
+<div >
+  <h3 class="title-definition container">Top 5 Caronas Disponíveis:</h3>
 </div>
+
+<section class="content container">
+
+  <div *ngFor="let carona of caronas" class="espaco-caronas">
+    <div class="card-carona">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ carona.motorista.nome }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div>
+            <p>Partida: {{ carona.partida }}</p>
+            <p>Destino: {{ carona.destino }}</p>
+          </div>
+
+          <div>
+            Pessoas Combinadas: 3
+          </div>
+
+          <div>
+            Assentos Disponíveis: 2
+          </div>
+
+          <div>
+            <mat-progress-bar mode="determinate" [value]="carona.countPass">
+            </mat-progress-bar>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="buttons-cards">
+          <button mat-raised-button color="primary" class="full-width"><mat-icon>flight</mat-icon> Combinar</button>
+          <button mat-button color="primary" class="full-width">Detalhes da viagem</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+</section>

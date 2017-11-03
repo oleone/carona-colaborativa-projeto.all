@@ -1,15 +1,13 @@
 #home-header
   z-index: 1
   display: block
-  position: fixed
+  position: relative
   box-shadow: 0 2px 5px rgba(0,0,0,.26)
   flex-wrap: wrap
   -webkit-box-direction: normal
   width: 100%
   margin: 0
   background-color: rgba(255,255,255,100)
-  .container
-    height: 100px
   img
     height: 50px
 
@@ -26,6 +24,22 @@
   cursor: default
 
 .section-home
-  overflow: hidden
-  img
-    repeat 1000
+  width: auto
+
+.espaco-caronas
+  display: block
+  padding-right: 10px
+  //overflow-y: scroll
+  //overflow-x: hidden
+
+.section-home
+  position: absolute
+
+.card-carona
+  width: auto
+
+.title-definition
+  margin-top: 20px
+
+.mat-card-header-text
+  margin: auto !important

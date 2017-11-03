@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -39,16 +40,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout.component';
+import { AuthLayoutComponent } from './layout/auth-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FullLayoutComponent,
-    SimpleLayoutComponent
+    SimpleLayoutComponent,
+    AuthLayoutComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -79,9 +80,13 @@ import { SimpleLayoutComponent } from './layout/simple-layout.component';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  /*providers: [
+    {provide: MAT_PLACEHOLDER_GLOBAL_OPTIONS, useValue: {float: 'always'}}
+  ],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }

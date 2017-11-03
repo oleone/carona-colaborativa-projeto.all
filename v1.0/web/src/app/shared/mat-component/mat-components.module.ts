@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
+// Angular Material
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -35,12 +35,9 @@ import {
   MatStepperModule
 } from '@angular/material';
 
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home.routing.module';
-
 @NgModule({
-  declarations: [HomeComponent],
   imports: [
+    CommonModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -70,10 +67,9 @@ import { HomeRoutingModule } from './home.routing.module';
     MatTooltipModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatStepperModule,
-    CommonModule,
-    HomeRoutingModule
+    MatStepperModule
   ],
-  exports: [RouterModule]
+  exports: [MatComponentsModule],
+  declarations: []
 })
-export class HomeModule { }
+export class MatComponentsModule { }

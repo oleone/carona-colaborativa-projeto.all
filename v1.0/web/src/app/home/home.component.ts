@@ -10,4 +10,77 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  // tslint:disable-next-line:member-ordering
+  caronas = [
+    {
+      partida: 'Tirol, Minas Gerais',
+      destino: 'Centro Universitário Una',
+      motorista: {
+        nome: 'Bruno Leone A. P. Corrêa',
+        curso: 'Analise e Desenvolvimento de Sistemas'
+      },
+      passageiros: [
+        { nome: 'Pablo Passos' },
+        { nome: 'Tiago Algusto'}
+      ],
+      countPass: 2 / 5 * 100,
+      countDisponiveis: 3 / 5 * 100
+    },
+    {
+      partida: 'Tirol, Minas Gerais',
+      destino: 'Centro Universitário Una',
+      motorista: {
+        nome: 'Bruno Leone A. P. Corrêa',
+        curso: 'Analise e Desenvolvimento de Sistemas'
+      },
+      passageiros: [
+        { nome: 'Pablo Passos' },
+        { nome: 'Tiago Algusto'}
+      ],
+      countPass: 2 / 5 * 100,
+      countDisponiveis: 3 / 5 * 100
+    },
+    {
+      partida: 'Tirol, Minas Gerais',
+      destino: 'Centro Universitário Una',
+      motorista: {
+        nome: 'Bruno Leone A. P. Corrêa',
+        curso: 'Analise e Desenvolvimento de Sistemas'
+      },
+      passageiros: [
+        { nome: 'Pablo Passos' },
+        { nome: 'Tiago Algusto'}
+      ],
+      countPass: 2 / 5 * 100,
+      countDisponiveis: 3 / 5 * 100
+    },{
+      partida: 'Tirol, Minas Gerais',
+      destino: 'Centro Universitário Una',
+      motorista: {
+        nome: 'Bruno Leone A. P. Corrêa',
+        curso: 'Analise e Desenvolvimento de Sistemas'
+      },
+      passageiros: [
+        { nome: 'Pablo Passos' },
+        { nome: 'Tiago Algusto'}
+      ],
+      countPass: 2 / 5 * 100,
+      countDisponiveis: 3 / 5 * 100
+    },
+    {
+      partida: 'Tirol, Minas Gerais',
+      destino: 'Centro Universitário Una',
+      motorista: {
+        nome: 'Bruno Leone A. P. Corrêa',
+        curso: 'Analise e Desenvolvimento de Sistemas'
+      },
+      passageiros: [
+        { nome: 'Pablo Passos' },
+        { nome: 'Tiago Algusto'}
+      ],
+      countPass: 2 / 5 * 100,
+      countDisponiveis: 3 / 5 * 100
+    }
+  ];
 }
