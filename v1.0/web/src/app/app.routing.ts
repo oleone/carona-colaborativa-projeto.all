@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SimpleLayoutComponent } from './layout/simple-layout.component';
 import { FullLayoutComponent } from './layout/full-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout.component';
+import { Error404Component } from './error/error-404/error-404.component';
 
 const APP_ROUTES: Routes = [
   {
@@ -12,31 +13,10 @@ const APP_ROUTES: Routes = [
     pathMatch: 'full'
   },
   { path: 'home', loadChildren: './home/home.module#HomeModule' },
-  {
-    path: 'signup',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './signup/signup.module#SignupModule'
-      }
-    ]
-  },
-  {
-    path: 'login',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './login/login.module#LoginModule'
-      }
-    ]
-  },
-  // { path: 'login', loadChildren: './login/login.module#LoginModule' },
-  // { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-  // { path: 'map', loadChildren: './map/map.module#MapModule' },
-  { path: '404', loadChildren: './not-found/not-found.module#NotFoundModule' },
-  { path: '**', redirectTo: '404', pathMatch: 'full' }
+  { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'login', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'error', component: Error404Component },
+  { path: '**', redirectTo: 'error', pathMatch: 'full' }
 ];
 
 @NgModule({

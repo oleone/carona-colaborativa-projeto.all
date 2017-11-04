@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
       destino: 'Centro Universitário Una',
       motorista: {
         nome: 'Bruno Leone A. P. Corrêa',
-        curso: 'Analise e Desenvolvimento de Sistemas'
+        curso: 'Analise e Desenvolvimento de Sistemas',
+        urlImg: '/assets/brunoleone.jpg'
       },
       passageiros: [
         { nome: 'Pablo Passos' },
@@ -32,7 +33,8 @@ export class HomeComponent implements OnInit {
       destino: 'Centro Universitário Una',
       motorista: {
         nome: 'Bruno Leone A. P. Corrêa',
-        curso: 'Analise e Desenvolvimento de Sistemas'
+        curso: 'Analise e Desenvolvimento de Sistemas',
+        urlImg: '/assets/brunoleone.jpg'
       },
       passageiros: [
         { nome: 'Pablo Passos' },
@@ -46,7 +48,8 @@ export class HomeComponent implements OnInit {
       destino: 'Centro Universitário Una',
       motorista: {
         nome: 'Bruno Leone A. P. Corrêa',
-        curso: 'Analise e Desenvolvimento de Sistemas'
+        curso: 'Analise e Desenvolvimento de Sistemas',
+        urlImg: '/assets/brunoleone.jpg'
       },
       passageiros: [
         { nome: 'Pablo Passos' },
@@ -59,7 +62,8 @@ export class HomeComponent implements OnInit {
       destino: 'Centro Universitário Una',
       motorista: {
         nome: 'Bruno Leone A. P. Corrêa',
-        curso: 'Analise e Desenvolvimento de Sistemas'
+        curso: 'Analise e Desenvolvimento de Sistemas',
+        urlImg: '/assets/brunoleone.jpg'
       },
       passageiros: [
         { nome: 'Pablo Passos' },
@@ -73,7 +77,8 @@ export class HomeComponent implements OnInit {
       destino: 'Centro Universitário Una',
       motorista: {
         nome: 'Bruno Leone A. P. Corrêa',
-        curso: 'Analise e Desenvolvimento de Sistemas'
+        curso: 'Analise e Desenvolvimento de Sistemas',
+        urlImg: '/assets/brunoleone.jpg'
       },
       passageiros: [
         { nome: 'Pablo Passos' },

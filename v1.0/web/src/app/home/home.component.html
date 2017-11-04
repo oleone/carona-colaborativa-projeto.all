@@ -1,26 +1,37 @@
 <header id="home-header">
-  <div class="container-header">
+  <div class="container container-header">
     <div class="home-logo">
-      <img src="assets/logo-full.png" alt="Carona .all">
+      <a href="/">
+        <!--span id="logo"><h1>Carona Colaborativa</h1></span-->
+        <img src="assets/logo-full.png" alt="Carona Colaborativa">
+      </a>
     </div>
     <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
-    <!--a mat-button routerLink="/solicitar-carona">Solicitar Carona</a-->
-    <a mat-button routerLink="/login">Login</a>
-    <a mat-button routerLink="/signup">Signup</a>
+    <a mat-button routerLink="#">Facilidades</a>
+    <a mat-button routerLink="#">Descontos</a>
+    <a mat-raised-button color="warn" routerLink="/auth/login">Solicitar Carona</a>
   </div>
 </header>
 
-<div >
+<section class="height-100" id="novo">
+  <div class="content container text-center">
+    <h1>Carona colaborativa com segurança!</h1>
+    <h2>Venha fazer parte dessa comunidade</h2>
+  </div>
+</section>
+
+<div>
   <h3 class="title-definition container">Top 5 Caronas Disponíveis:</h3>
 </div>
 
 <section class="content container">
-
   <div *ngFor="let carona of caronas" class="espaco-caronas">
     <div class="card-carona">
       <mat-card>
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div mat-card-avatar class="example-header-image">
+            <img [src]="carona.motorista.urlImg" [alt]="carona.motorista.nome" class="img-avatar no-select">
+          </div>
           <mat-card-title>{{ carona.motorista.nome }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
@@ -28,26 +39,29 @@
             <p>Partida: {{ carona.partida }}</p>
             <p>Destino: {{ carona.destino }}</p>
           </div>
-
           <div>
-            Pessoas Combinadas: 3
+            Faltam: 2 pessoas
           </div>
 
           <div>
-            Assentos Disponíveis: 2
-          </div>
-
-          <div>
-            <mat-progress-bar mode="determinate" [value]="carona.countPass">
+            <mat-progress-bar mode="determinate" [value]="carona.countDisponiveis">
             </mat-progress-bar>
           </div>
         </mat-card-content>
         <mat-card-actions class="buttons-cards">
-          <button mat-raised-button color="primary" class="full-width"><mat-icon>flight</mat-icon> Combinar</button>
-          <button mat-button color="primary" class="full-width">Detalhes da viagem</button>
+          <button mat-raised-button color="primary" class="full-width">
+            <mat-icon>flight</mat-icon> Combinar</button>
+          <a mat-button color="primary" class="full-width">Detalhes</a>
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
-
 </section>
+
+<footer id="footer">
+  <div class="container">
+    <p class="text-center">Project by LEONETECK.
+      <a href="https://github.com/leonecorrea/carona-colaborativa-projeto.all">GitHub</a>
+    </p>
+  </div>
+</footer>

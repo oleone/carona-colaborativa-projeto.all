@@ -40,14 +40,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout.component';
-import { AuthLayoutComponent } from './layout/auth-layout.component';
+import { Error404Component } from './error/error-404/error-404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FullLayoutComponent,
     SimpleLayoutComponent,
-    AuthLayoutComponent
+    Error404Component
   ],
   imports: [
     MatAutocompleteModule,
@@ -84,9 +84,6 @@ import { AuthLayoutComponent } from './layout/auth-layout.component';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  /*providers: [
-    {provide: MAT_PLACEHOLDER_GLOBAL_OPTIONS, useValue: {float: 'always'}}
-  ],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }
