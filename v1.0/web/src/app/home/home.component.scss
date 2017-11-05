@@ -1,115 +1,13 @@
-html,body{
-  width: 100%;
-  height:100%;
+.action-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
-#home-header {
-  z-index: 1;
+.action-subtitle {
+  margin-top: 50px;
+}
+#botao-scroll-header {
   display: block;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,.26);
-  flex-wrap: wrap;
-  -webkit-box-direction: normal;
-  width: 100%;
-  margin: 0;
-  background-color: rgba(255,255,255,100);
-  position: fixed;
-  img {
-    height: 50px;
-    width: auto;
-  }
-}
-
-.container-header {
-  //max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  box-sizing: border-box;
-  max-height: 100%;
-  flex-flow: row wrap;
-  align-content: center flex-start;
-  align-items: center;
-  height: 100px;
-  //min-width: 900px
-}
-
-#logo {
-  font-family: Roboto;
-  text-transform: uppercase;
-  color: rgba(255, 0, 0, 0.952);
-  a {
-    text-decoration: none;
-  }
-}
-
-.button-header {
-  margin: 10px 0 10px 0;
-}
-
-.no-selected {
-  -webkit-touch-callout: none;  // iPhone OS, Safari
-  -webkit-user-select: none;  // Chrome, Safari 3
-  -khtml-user-select: none;   // Safari 2
-  -moz-user-select: none;     // Firefox
-  -ms-user-select: none;      // IE10+
-  user-select: none;          // Possível implementação no futuro
-  cursor: default;
-}
-
-.section-home {
-  width: auto;
-}
-
-.section-home {
-  position: absolute;
-}
-
-.card-carona{
-  width: 100%;
-}
-
-.espaco-caronas {
-  display: flex !important;
-  padding-right: 10px;
-  //overflow-y: scroll;
-  //overflow-x: hidden;
-}
-
-.img-avatar {
-  height: 50px;
-  width: auto;
-  border-radius: 50px;
-}
-
-.title-definition {
-  margin-top: 20px;
-}
-
-.mat-card-header-text {
-  margin: auto !important;
-}
-
-#novo {
-  background-color: #e74c3c;
-}
-
-section {
-  //display: table;
-  width: 100%;
-}
-.height-80 {
-  height: 80vh;
-}
-.height-50 {
-  height: 50vh;
-}
-.height-100 {
-  height: 100vh;
-}
-.content {
-  color: #FFFFFF;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 7%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0px;
 }

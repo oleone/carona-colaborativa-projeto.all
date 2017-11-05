@@ -41,13 +41,15 @@ import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout.component';
 import { Error404Component } from './error/error-404/error-404.component';
+import { LoadInicialComponent } from './layout/load-inicial/load-inicial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FullLayoutComponent,
     SimpleLayoutComponent,
-    Error404Component
+    Error404Component,
+    LoadInicialComponent
   ],
   imports: [
     MatAutocompleteModule,

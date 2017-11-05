@@ -1,4 +1,4 @@
-<header id="home-header">
+<nav id="home-header">
   <div class="container container-header">
     <div class="home-logo">
       <a href="/">
@@ -7,29 +7,42 @@
       </a>
     </div>
     <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
-    <a mat-button routerLink="#">Facilidades</a>
-    <a mat-button routerLink="#">Descontos</a>
-    <a mat-raised-button color="warn" routerLink="/auth/login">Solicitar Carona</a>
+    <div class="botoes-header">
+      <!--a mat-button routerLink="#">Facilidades</a>
+        <a mat-button routerLink="#">Descontos</a-->
+      <a id="button-destaque-header" mat-raised-button color="warn" routerLink="/auth/login">Participar</a>
+    </div>
   </div>
-</header>
+</nav>
 
-<section class="height-100" id="novo">
+<section class="height-100" id="header-novo">
   <div class="content container text-center">
-    <h1>Carona colaborativa com segurança!</h1>
-    <h2>Venha fazer parte dessa comunidade</h2>
+    <h1 class="action-title">Carona Colaborativa</h1>
+    <h3 class="action-subtitle">Transporte rápido e seguro a qualquer momento!</h3>
+    <!--img src="assets/img/searchbox.png" alt="Aqui será nosso search box" class="search-box"-->
+  </div>
+
+  <div id="botao-scroll-header">
+    <button mat-icon-button>
+      <mat-icon aria-label="Botão scroll da tela">keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
+
+  <div class="imagem-mapa">
+    <img src="/assets/img/google-maps-img.png" alt="">
   </div>
 </section>
 
-<div>
-  <h3 class="title-definition container">Top 5 Caronas Disponíveis:</h3>
+<div class="container">
+  <h3 class="title-definition container">Caronas Rolando Nesse Momento</h3>
 </div>
 
-<section class="content container">
-  <div *ngFor="let carona of caronas" class="espaco-caronas">
-    <div class="card-carona">
-      <mat-card>
+<section id="content" class="container">
+  <mat-grid-list cols="3" rowHeight="3:1" class="col col-lg-12">
+    <mat-grid-tile *ngFor="let carona of caronas" colspan="1" rowspan="2" style.background="primary">
+      <mat-card class="full-width">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image">
+          <div mat-card-avatar>
             <img [src]="carona.motorista.urlImg" [alt]="carona.motorista.nome" class="img-avatar no-select">
           </div>
           <mat-card-title>{{ carona.motorista.nome }}</mat-card-title>
@@ -39,29 +52,34 @@
             <p>Partida: {{ carona.partida }}</p>
             <p>Destino: {{ carona.destino }}</p>
           </div>
-          <div>
-            Faltam: 2 pessoas
-          </div>
-
-          <div>
-            <mat-progress-bar mode="determinate" [value]="carona.countDisponiveis">
-            </mat-progress-bar>
-          </div>
         </mat-card-content>
-        <mat-card-actions class="buttons-cards">
-          <button mat-raised-button color="primary" class="full-width">
-            <mat-icon>flight</mat-icon> Combinar</button>
-          <a mat-button color="primary" class="full-width">Detalhes</a>
+        <mat-card-actions class="full-width">
+          <nav hidden>
+            <button mat-icon-button>
+              <mat-icon aria-label="Example icon-button with a heart icon">group</mat-icon>
+            </button>
+            {{ carona.countPass }}
+          </nav>
+          <div class="center">
+            <button mat-icon-button>
+              <mat-icon aria-label="Example icon-button with a heart icon">star</mat-icon>
+              <mat-icon aria-label="Example icon-button with a heart icon">star</mat-icon>
+              <mat-icon aria-label="Example icon-button with a heart icon">star</mat-icon>
+              <mat-icon aria-label="Example icon-button with a heart icon">star</mat-icon>
+              <mat-icon aria-label="Example icon-button with a heart icon">star_border</mat-icon>
+            </button>
+          </div>
         </mat-card-actions>
       </mat-card>
-    </div>
-  </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
 </section>
 
 <footer id="footer">
   <div class="container">
-    <p class="text-center">Project by LEONETECK.
-      <a href="https://github.com/leonecorrea/carona-colaborativa-projeto.all">GitHub</a>
+    <p class="text-center">By
+      <a href="https://leonecorrea.com">@leonecorrea</a> With ❤
     </p>
   </div>
 </footer>
