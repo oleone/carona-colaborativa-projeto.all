@@ -34,17 +34,13 @@ import {
   MatStepperModule
 } from '@angular/material';
 
-import { AuthRoutingModule } from './auth.routing.module';
-import { AuthComponent } from './auth.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { AuthLayoutComponent } from '../layout/auth-layout.component';
+import { SignupComponent } from './signup.component';
+import { SignupRoutingModule } from './signup.routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    SignupRoutingModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -74,14 +70,8 @@ import { AuthLayoutComponent } from '../layout/auth-layout.component';
     MatTooltipModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatStepperModule
+    MatStepperModule,
   ],
-  declarations: [
-    AuthComponent,
-    LoginComponent,
-    SignupComponent,
-    ForgotPasswordComponent,
-    AuthLayoutComponent
-  ]
+  declarations: [SignupComponent]
 })
-export class AuthModule { }
+export class SignupModule { }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 import {
   MatAutocompleteModule,
@@ -35,13 +34,13 @@ import {
   MatStepperModule
 } from '@angular/material';
 
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home.routing.module';
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { LoginComponent } from './login.component';
+import { LoginRoutingModule } from './login.routing.module';
 
 @NgModule({
-  declarations: [ HomeComponent, NavbarComponent ],
   imports: [
+    CommonModule,
+    LoginRoutingModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -72,9 +71,7 @@ import { NavbarComponent } from '../shared/components/navbar/navbar.component';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
-    CommonModule,
-    HomeRoutingModule
   ],
-  exports: [RouterModule]
+  declarations: [LoginComponent]
 })
-export class HomeModule { }
+export class LoginModule { }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

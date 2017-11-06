@@ -13,10 +13,13 @@ const APP_ROUTES: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  // { path: '', canLoad: LoadInicialComponent },
+  // { path: '', component: LoadInicialComponent },
   { path: 'home', loadChildren: './home/home.module#HomeModule' },
-  { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
-  { path: 'login', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'signup', loadChildren: './auth/signup/signup.module#SignupModule' },
+  { path: 'forgot-password',
+    loadChildren: './auth/forgot-password/forgot-password.module#ForgotPasswordModule'
+  },
+  { path: 'login', loadChildren: './auth/login/login.module#LoginModule' },
   { path: 'error', component: Error404Component },
   { path: '**', redirectTo: 'error', pathMatch: 'full' }
 ];

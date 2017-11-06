@@ -11,6 +11,4 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  // tslint:disable-next-line:member-ordering
-  pag: any = { color: '', title: '.ALL', subtitle: '' };
 }

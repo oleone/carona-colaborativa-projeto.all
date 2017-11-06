@@ -1,24 +1,77 @@
-<mat-sidenav-container class="example-container" role="header">
+<!--mat-sidenav-container class="example-container" role="header">
   <mat-sidenav #sidenav class="cabecalho-sidenav">
     <div id="header-sidenav">
 
     </div>
   </mat-sidenav>
 
-  <mat-toolbar class="mat-toolbar mat-toolbar-layout" [color]="pag.color" role="toolbar">
+  <!--mat-toolbar class="mat-toolbar mat-toolbar-layout" [color]="pag.color" role="toolbar">
     <span>
       <button mat-icon-button (click)="sidenav.open()">
         <mat-icon>menu</mat-icon>
       </button>
     </span>
     <span>
-      <h1 id="title-menu" class="not-select">{{ pag.title }}</h1>
+      <h1 id="title-menu" class="not-select">texte</h1>
     </span>
-  </mat-toolbar>
+  </mat-toolbar-->
 
-<!--mat-grid-list cols="4" rowHeight="1000px" role="header">
-  <mat-grid-tile></mat-grid-tile>
-</mat-grid-list-->
-<div class="content"></div>
+<!--section id="home-header">
+    <div class="container container-header">
+      <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="home-logo">
+        <a href="/">
+          <!--span id="logo"><h1>Carona Colaborativa</h1></span-->
+<!--img src="assets/logo-full.png" alt="Carona Colaborativa">
+        </a>
+      </div>
+      <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
+      <div class="botoes-header">
+        <!--a mat-button routerLink="#">Facilidades</a>
+            <a mat-button routerLink="#">Descontos</a-->
+<!--a id="button-destaque-header" mat-raised-button color="warn" routerLink="/login">Participar</a>
+      </div>
+    </div>
+  </section>
 
+</mat-sidenav-container-->
+
+<mat-sidenav-container class="main-container" role="header">
+  <mat-sidenav #sidenav class="cabecalho-sidenav">
+    <div id="header-sidenav">
+
+    </div>
+  </mat-sidenav>
+
+  <section id="home-header">
+    <div class="container container-header">
+      <!--button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button-->
+      <div class="home-logo">
+        <a href="/">
+          <!--span id="logo"><h1>Carona Colaborativa</h1></span-->
+          <img src="assets/logo-full.png" alt="Carona Colaborativa">
+        </a>
+      </div>
+      <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
+
+      <div class="botoes-header hidden-mobile">
+        <a id="button-destaque-header" mat-raised-button color="warn" routerLink="/login">Participar</a>
+      </div>
+
+      <div class="visible-mobile">
+        <button mat-icon-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
 </mat-sidenav-container>
