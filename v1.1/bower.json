@@ -1,0 +1,10 @@
+{
+  "name": "carona-colaborativa-pandarona",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Leone Corrêa <leone.analistadesistemas@outlook.com.br>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/leonecorrea/carona-colaborativa-projeto.all"
+}

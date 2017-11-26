@@ -1,5 +1,5 @@
 <div class="page-wrap height-100 bg-primary auth">
-  <div class="session-form-hold">
+  <div class="session-form-hold animated fadeInDown">
     <mat-card>
       <mat-card-header class="text-center">
         <mat-card-title>
@@ -10,37 +10,29 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #nome matInput placeholder="Nome" value="">
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #email matInput placeholder="Sobrenome" value="">
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #email matInput placeholder="Email" value="">
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #senha matInput placeholder="Senha" value="" type="password">
-          </mat-form-field>
-        </div>
-        <div>
+        <form [formGroup]="f" (ngSubmit)="avancar()">
+          <div>
             <mat-form-field class="example-full-width">
-              <input #senhaConf matInput placeholder="Repita a Senha" value="" type="password">
+              <input matInput placeholder="Nome Completo" formControlName="name" required>
             </mat-form-field>
           </div>
-        <div class="campo-login">
-          <button mat-raised-button color="primary" class="button-login">Avançar</button>
-        </div>
-        <div class="campo-login link-auth text-center full-width" style="display: flex; box-sizing: border-box; flex-direction: row;">
-          <a routerLink="/auth/login">Já tenho uma conta</a>
-        </div>
+          <div>
+            <mat-form-field class="example-full-width">
+              <input #email matInput placeholder="Email"  formControlName="email" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width">
+              <input #senha matInput placeholder="Senha" type="password"  formControlName="password" required>
+            </mat-form-field>
+          </div>
+          <div class="campo-login">
+            <button mat-raised-button color="primary" class="button-login" [disabled]="!f.valid">Avançar</button>
+          </div>
+          <div class="campo-login link-auth text-center full-width" style="display: flex; box-sizing: border-box; flex-direction: row;">
+            <a routerLink="/login">Já tenho uma conta</a>
+          </div>
+        </form>
       </mat-card-content>
     </mat-card>
   </div>

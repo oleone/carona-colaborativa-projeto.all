@@ -36,6 +36,7 @@ import {
 
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login.routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -71,7 +72,9 @@ import { LoginRoutingModule } from './login.routing.module';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [LoginComponent]
 })
-export class LoginModule { }
+export class LoginModule {}

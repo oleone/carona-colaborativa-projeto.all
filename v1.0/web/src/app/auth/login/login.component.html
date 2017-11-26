@@ -1,5 +1,5 @@
-<div class="page-wrap height-100 bg-primary login height-100">
-  <div class="session-form-hold">
+<div class="page-wrap height-100 height-100 bg-primary" id="login">
+  <div class="session-form-hold animated fadeInDown">
     <mat-card>
       <mat-card-header class="text-center">
         <mat-card-title>
@@ -10,31 +10,52 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #email matInput placeholder="Email" value="">
-          </mat-form-field>
+        <form [formGroup]="f" (ngSubmit)="onSubmit()">
+          <div>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" formControlName="email" required>
+              <mat-error *ngIf="f.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Senha" type="password" formControlName="password" required>
+            </mat-form-field>
+          </div>
+
+          <div class="campo-login">
+            <mat-checkbox color="primary" formControlName="remember_me">Lembrar de mim</mat-checkbox>
+          </div>
+
+          <div class="campo-login">
+            <button mat-raised-button color="primary" class="button-login" type="submit" [disabled]="!f.valid">Entrar</button>
+          </div>
+
+          <div class="campo-login link-auth text-center full-width" style="display: flex; box-sizing: border-box; flex-direction: row;">
+            <a routerLink="/forgot-password">Perdi a senha</a>
+            <span class="space"></span>
+            <a routerLink="/signup">Criar nova conta</a>
+          </div>
+        </form>
+
+        <div class="" hidden>
+          <button mat-icon-button>
+            <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+          </button>
+
+          <button mat-icon-button>
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </button>
+
+          <button mat-icon-button>
+            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+          </button>
+
+          <button mat-icon-button>
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          </button>
         </div>
 
-        <div>
-          <mat-form-field class="example-full-width">
-            <input #senha matInput placeholder="Senha" type="password" value="">
-          </mat-form-field>
-        </div>
-
-        <div class="campo-login">
-          <mat-checkbox color="primary">Lembrar de mim</mat-checkbox>
-        </div>
-
-        <div class="campo-login">
-          <button mat-raised-button color="primary" class="button-login" (click)="logar()">Entrar</button>
-        </div>
-
-        <div class="campo-login link-auth text-center full-width" style="display: flex; box-sizing: border-box; flex-direction: row;">
-          <a routerLink="/forgot-password">Perdi a senha</a>
-          <span class="space"></span>
-          <a routerLink="/signup">Criar nova conta</a>
-        </div>
       </mat-card-content>
     </mat-card>
   </div>

@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "carona-colaborativa-projeto-.-all"
+    "name": "pandarona"
   },
   "apps": [
     {
@@ -20,9 +20,14 @@
       "prefix": "app",
       "styles": [
         "scss/styles.scss",
-        "scss/styles-mobile.scss"
+        "scss/styles-mobile.scss",
+        "./assets/css/animate.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/wow.js",
+        "assets/fonts/fa.js",
+        "../node_modules/chart.js/src/chart.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

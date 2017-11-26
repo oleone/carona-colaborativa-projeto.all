@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
-
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngOnInit() {}
-
-  // tslint:disable-next-line:member-ordering
   caronas = [
     {
       partida: 'Tirol, Minas Gerais',
@@ -112,5 +107,13 @@ export class HomeComponent implements OnInit {
   i: any = 0;
   public countPlus() {
     this.i++;
+  }
+
+  ngOnInit() {
+    console.log('Carregando pagina;');
+  }
+
+  ngAfterViewInit() {
+    console.log('Pagina carregada;');
   }
 }

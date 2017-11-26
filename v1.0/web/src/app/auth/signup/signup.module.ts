@@ -36,6 +36,8 @@ import {
 
 import { SignupComponent } from './signup.component';
 import { SignupRoutingModule } from './signup.routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Next1Component } from './next1/next1.component';
 
 @NgModule({
   imports: [
@@ -71,7 +73,9 @@ import { SignupRoutingModule } from './signup.routing.module';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [SignupComponent]
+  declarations: [SignupComponent, Next1Component]
 })
 export class SignupModule { }

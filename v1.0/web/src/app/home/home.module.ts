@@ -37,10 +37,10 @@ import {
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
-  declarations: [ HomeComponent, NavbarComponent ],
+  declarations: [ HomeComponent ],
   imports: [
     MatAutocompleteModule,
     MatButtonModule,
@@ -73,7 +73,8 @@ import { NavbarComponent } from '../shared/components/navbar/navbar.component';
     MatExpansionModule,
     MatStepperModule,
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    LayoutModule
   ],
   exports: [RouterModule]
 })

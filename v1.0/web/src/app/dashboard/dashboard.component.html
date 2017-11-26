@@ -1,14 +1,78 @@
-<!--mat-progress-bar mode="indeterminate"></mat-progress-bar-->
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav class="example-sidenav">
-    Jolly good!
-  </mat-sidenav>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="sidenav.open()">
-      Open sidenav
-    </button>
-
+<div class="grupo-cards">
+  <div class="div-card-dash">
+    <mat-card class="card-dash">
+      <mat-card-title>
+        Viagens
+      </mat-card-title>
+      <mat-card-content>
+        109 +
+      </mat-card-content>
+    </mat-card>
   </div>
+  <div class="div-card-dash">
+    <mat-card class="card-dash">
+      <mat-card-title>
+        Visitas
+      </mat-card-title>
+      <mat-card-content>
+        10 +
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="div-card-dash">
+    <mat-card class="card-dash">
+      <mat-card-title>
+        Satisfações
+      </mat-card-title>
+      <mat-card-content>
+        20 %
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="div-card-dash">
+    <mat-card class="card-dash">
+      <mat-card-title>
+        Pontos
+      </mat-card-title>
+      <mat-card-content>
+        200 +
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
 
-</mat-sidenav-container>
+<div class="chart">
+  <mat-card>
+    <mat-card-title>
+      Graficos
+    </mat-card-title>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-6">
+          <div style="display: block;">
+            <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+              [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 10px">
+          <div style="display: block">
+            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="map">
+  <mat-card>
+    <mat-card-title>
+      Mapa
+    </mat-card-title>
+    <mat-card-content>
+
+    </mat-card-content>
+  </mat-card>
+</div>
