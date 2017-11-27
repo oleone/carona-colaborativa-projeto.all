@@ -113,40 +113,6 @@ a {
     text-orientation: center;
 }
 
-#footer {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: hsla(234, 85%, 28%, 0.836);
-    color: #fff;
-    padding-top: 5vh;
-    z-index: 19990;
-    p {
-        margin: auto;
-    }
-    a {
-        text-decoration: none;
-        color: #fff;
-    }
-}
-
-#home-header {
-    z-index: 9999;
-    display: block;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
-    flex-wrap: wrap;
-    -webkit-box-direction: normal;
-    width: 100%;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 100);
-    position: fixed;
-    img {
-        height: 50px;
-        width: auto;
-    }
-}
-
 .container-header {
     //max-width: 1170px;
     margin: 0 auto;
@@ -370,6 +336,70 @@ h4 {
 }
 
 agm-map {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#home-header {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 100);
+    position: fixed;
+    img {
+        height: 50px;
+        width: auto;
+    }
+}
+
+.cabecalho-sidenav {
+    // width: 500px;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+}
+
+.cabecalho {
+    width: 300px;
+}
+
+.header-container {
+    background-color: #0066eb;
+    color: #ffff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+        padding-top: 10%;
+    }
+}
+
+.header-menu a {
+    text-align: center;
+}
+
+.cabecalho .header-imagem {
+    background-image: url('/assets/brunoleone.jpg'); //https://material.angular.io/assets/img/examples/shiba1.jpg
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border: 2px #fff;
+}
+
+#logo {
+  height: 50px;
+  width: auto;
 }

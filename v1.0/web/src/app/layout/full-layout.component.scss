@@ -1,3 +1,20 @@
+#home-header {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 100);
+    position: fixed;
+    img {
+        height: 50px;
+        width: auto;
+    }
+}
+
 .cabecalho-sidenav {
     // width: 500px;
     overflow: hidden;

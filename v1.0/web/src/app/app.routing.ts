@@ -68,6 +68,13 @@ const APP_ROUTES: Routes = [
       { path: '', loadChildren: './map/map.module#MapModule' }
     ]
   },
+  {
+    path: 'home',
+    component: SimpleLayoutComponent,
+    children: [
+      { path: '', loadChildren: './home/home.module#HomeModule' }
+    ]
+  },
   { path: 'signup', loadChildren: './auth/signup/signup.module#SignupModule' },
   { path: 'forgot-password', loadChildren: './auth/forgot-password/forgot-password.module#ForgotPasswordModule'},
   { path: 'login', loadChildren: './auth/login/login.module#LoginModule' },

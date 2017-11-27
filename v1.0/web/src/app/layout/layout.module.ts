@@ -76,7 +76,6 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatFormFieldModule,
     MatExpansionModule,
     MatStepperModule,
-    MatHorizontalStepper,
     CdkTableModule,
     LayoutRoutingModule,
     ChartsModule

@@ -14,6 +14,11 @@ import { ChartsModule } from 'ng2-charts';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    LayoutModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDpYVG9Wn4I2YFHMp62HYeH9SBkGG_Q0nY'
+    }),
+    ChartsModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -43,12 +48,7 @@ import { ChartsModule } from 'ng2-charts';
     MatTooltipModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatStepperModule,
-    LayoutModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDpYVG9Wn4I2YFHMp62HYeH9SBkGG_Q0nY'
-    }),
-    ChartsModule
+    MatStepperModule
   ],
   declarations: [DashboardComponent]
 })

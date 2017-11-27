@@ -1,43 +1,19 @@
-<mat-sidenav-container class="main-container" role="header">
-  <mat-sidenav #sidenav class="cabecalho-sidenav">
-    <div id="header-sidenav">
-
-    </div>
-  </mat-sidenav>
+<mat-sidenav-container role="header">
 
   <section id="home-header">
-    <div class="container container-header">
-      <!--button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button-->
-      <h1>pontuall</h1>
+    <div class="container-header container">
+
+      <img src="/assets/logo.png" id="logo">
 
       <span style="flex: 1 1 1e-09px; box-sizing: border-box;"></span>
 
-      <div class="botoes-header hidden-mobile">
-        <a id="button-destaque-header" mat-raised-button color="warn" routerLink="/login"></a>
-      </div>
-
-      <button mat-icon-button>
-        <mat-icon>account_circle</mat-icon>
-      </button>
-
-      <button mat-icon-button [matMenuTriggerFor]="menu" class="visible-mobile">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/login">
-          <span>Configurações</span>
-        </button>
-        <button mat-menu-item routerLink="/signup">
-          <span>Ajuda e feedback</span>
-        </button>
-      </mat-menu>
+      <a mat-button  routerLink="/signup">Cadastrar</a>
+      <a mat-raised-button color="warn" routerLink="/login">Entrar</a>
 
     </div>
   </section>
 
-  <div class="main">
+  <div class="main container-fluid">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
