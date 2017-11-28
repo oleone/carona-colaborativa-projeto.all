@@ -26,7 +26,6 @@ body {
 
 .main {
     margin-top: 70px;
-    padding: 5px;
 }
 
 //Container e menu
@@ -399,7 +398,10 @@ agm-map {
     border: 2px #fff;
 }
 
-#logo {
-  height: 50px;
-  width: auto;
+.logo {
+    height: 70px;
+    text-align: center;
+    img{
+      height: 100%;
+    }
 }
