@@ -10,8 +10,8 @@ import { LayoutModule, firebaseConfig } from '../layout/layout.module';
 import { AgmCoreModule } from '@agm/core';
 import { ChartsModule } from 'ng2-charts';
 import { AuthService } from '../services/auth.service';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @NgModule({
   imports: [
@@ -56,6 +56,6 @@ import { AngularFireModule } from 'angularfire2';
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   declarations: [DashboardComponent],
-  providers: [ AuthService, AngularFireAuth ]
+  providers: [ AuthService ]
 })
 export class DashboardModule {}

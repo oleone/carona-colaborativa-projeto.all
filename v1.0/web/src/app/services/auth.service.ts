@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-
-import * as firebase from 'firebase';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
+
+import * as firebase from 'firebase/app';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../classes/User';
 
 @Injectable()

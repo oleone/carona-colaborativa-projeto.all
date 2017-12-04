@@ -1,6 +1,6 @@
 {
-  "name": "application",
-  "version": "0.0.0",
+  "name": "pontuall",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -24,13 +24,15 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "angularfire2": "^5.0.0-rc.4",
+    "@types/node": "^6.0.92",
+    "angularfire2": "^5.0.0-rc.5-next",
     "chart.js": "^2.7.1",
     "core-js": "^2.4.1",
     "firebase": "^4.7.0",
     "hammerjs": "^2.0.8",
+    "karma-jasmine": "^1.1.1",
     "ng2-charts": "^1.6.0",
-    "rxjs": "^5.4.2",
+    "rxjs": "^5.5.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
