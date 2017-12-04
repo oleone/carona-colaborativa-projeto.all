@@ -6,9 +6,12 @@ import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPagin
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard.routing.module';
-import { LayoutModule } from '../layout/layout.module';
+import { LayoutModule, firebaseConfig } from '../layout/layout.module';
 import { AgmCoreModule } from '@agm/core';
 import { ChartsModule } from 'ng2-charts';
+import { AuthService } from '../services/auth.service';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
   imports: [
@@ -48,8 +51,11 @@ import { ChartsModule } from 'ng2-charts';
     MatTooltipModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatStepperModule
+    MatStepperModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  declarations: [DashboardComponent]
+  declarations: [DashboardComponent],
+  providers: [ AuthService, AngularFireAuth ]
 })
 export class DashboardModule {}

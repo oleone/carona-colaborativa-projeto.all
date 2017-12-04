@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
 
   avancar() {
     console.log(this.f.value);
-    this.router.navigate(['/welcome']);
+    this.router.navigate(['/dashboard']);
   }
 
 }

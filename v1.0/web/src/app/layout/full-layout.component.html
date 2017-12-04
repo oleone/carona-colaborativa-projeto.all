@@ -12,7 +12,7 @@
           <a routerLink="/transacoes" mat-menu-item> Transações </a>
           <a routerLink="/settings" mat-menu-item> Configurações </a>
           <a routerLink="/about" mat-menu-item> Sobre </a>
-          <a routerLink="/login" mat-menu-item> Sair </a>
+          <a (click)="logout()" mat-menu-item> Sair </a>
         </div>
       </div>
   </mat-sidenav>

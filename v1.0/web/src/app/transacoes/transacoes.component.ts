@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from '@angular/material';
+// import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-transacoes',
@@ -11,9 +11,9 @@ export class TransacoesComponent implements OnInit {
 
   ngOnInit() {
   }
-  
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
+
+  // displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  // dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
 
 }
 

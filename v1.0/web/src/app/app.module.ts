@@ -90,4 +90,4 @@ import { LoadInicialComponent } from './layout/load-inicial/load-inicial.compone
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
